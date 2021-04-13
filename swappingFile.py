@@ -1,0 +1,16 @@
+def swapfiles(file1,file2):
+    f1=open(file1,"r")
+    f2=open(file2,"r")
+    f1content=f1.readlines()
+    f2content=f2.readlines()
+    f1=open(file1,"w")
+    f2=open(file2,"w")
+    f1.writelines(f2content)
+    f2.writelines(f1content)
+    f1.close()
+    f2.close()
+    print("swap sucessful")
+
+one=input("enter file name 1 :")
+two=input("enter file name 2 :")
+swapfiles(one,two)
